@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Weather</title>
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <link rel="stylesheet" href="./style/style.css" />
+</head>
+
+<body>
+
+  <header class="top-header">
+    <h1>My Weather</h1>
+
+    <div class="top-controls">
+      <div class="search">
+        <input id="cityInput" placeholder="도시를 입력하세요" />
+        <button id="searchBtn">검색</button>
+      </div>
+
+      <button id="toggleUnit" class="unit-btn">°C ↔ °F</button>
+    </div>
+
+    <div class="recent-search-container">
+      <h3>최근 검색</h3>
+      <div id="recentList" class="recent-list"></div>
+    </div>
+  </header>
+
+  <main class="main-container">
+
+    <section id="currentWeather" class="weather-main"></section>
+
+    <section id="forecast" class="forecast-cards"></section>
+
+    <section id="airQuality" class="aqi-card"></section>
+
+    <section id="radar" class="radar-card">
+      <h2>기상 레이더</h2>
+      <div id="map"></div>
+    </section>
+
+  </main>
+
+  <script src="./js/api.js"></script>
+  <script src="./js/ui.js"></script>
+  <script src="./js/radar.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
